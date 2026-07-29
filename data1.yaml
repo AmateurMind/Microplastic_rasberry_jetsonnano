@@ -1,0 +1,10 @@
+# Custom Microplastic Detection Dataset (Task 3)
+# Synthetic subset generated procedurally; combine with downloaded secondary
+# datasets (see dataset_documentation.md) under the same folder convention.
+path: /home/claude/task3/Custom_Microplastic_Dataset
+train: train/images
+val: val/images
+test: test/images
+
+nc: 5
+names: ['fiber', 'fragment', 'film', 'pellet', 'foam']

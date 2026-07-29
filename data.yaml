@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['fiber', 'film', 'fragment', 'pallet']
+
+roboflow:
+  workspace: kueranan
+  project: microplastic_100
+  version: 10
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/kueranan/microplastic_100/dataset/10

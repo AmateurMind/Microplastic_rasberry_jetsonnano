@@ -1,0 +1,9 @@
+# YOLO dataset configuration for the downloaded Kaggle microplastic dataset.
+# Use this file for local Windows training; the root data.yaml describes the
+# separate five-class synthetic subset and contains a non-Windows path.
+path: C:/Users/suhai/Downloads/Custom_Microplastic_Dataset/Custom_Microplastic_Dataset/dataset
+train: train/images
+val: valid/images
+
+nc: 1
+names: [microplastic]
