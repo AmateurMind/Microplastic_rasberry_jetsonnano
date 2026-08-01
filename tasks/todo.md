@@ -15,3 +15,9 @@
 - [ ] Install PyTorch and Ultralytics with CUDA support.
 - [ ] Launch training and verify that weights and logs are produced.
 - [ ] Record final training status and output locations.
+
+## Synthetic Dataset
+
+- [x] Make the synthetic generator and splitter configurable by output path.
+- [x] Generate the standalone `syntheric/` five-class YOLO dataset.
+- [x] Verify image/label pairing and preserve the `kueranan/` dataset.

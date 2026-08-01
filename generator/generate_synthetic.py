@@ -17,6 +17,7 @@ e.g. GESAMP / Meyers et al. 2022 Nile-Red morphology scheme):
 
 Output: PNG image + .txt YOLO label per sample, written to dataset_raw/
 """
+import argparse
 import os, random, math
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
@@ -26,9 +27,14 @@ np.random.seed(42)
 
 IMG_SIZE = 640
 CLASSES = ["fiber", "fragment", "film", "pellet", "foam"]
-OUT_DIR = "/home/claude/task3/dataset_raw"
-os.makedirs(os.path.join(OUT_DIR, "images"), exist_ok=True)
-os.makedirs(os.path.join(OUT_DIR, "labels"), exist_ok=True)
+OUT_DIR = "dataset_raw"
+
+
+def prepare_output_dir(output_dir):
+    global OUT_DIR
+    OUT_DIR = os.path.abspath(output_dir)
+    os.makedirs(os.path.join(OUT_DIR, "images"), exist_ok=True)
+    os.makedirs(os.path.join(OUT_DIR, "labels"), exist_ok=True)
 
 PARTICLE_COLORS = [
     (235, 235, 240), (210, 220, 230), (190, 195, 205),
@@ -198,7 +204,14 @@ def generate_image(idx, n_particles_range=(6, 22)):
 
 
 if __name__ == "__main__":
-    N = 180
+    parser = argparse.ArgumentParser(description="Generate synthetic microplastic YOLO data")
+    parser.add_argument("--output", default="dataset_raw", help="Output directory for images, labels, and classes.txt")
+    parser.add_argument("--count", type=int, default=180, help="Number of images to generate")
+    args = parser.parse_args()
+    if args.count < 1:
+        raise SystemExit("--count must be at least 1")
+    prepare_output_dir(args.output)
+    N = args.count
     names = [generate_image(i) for i in range(N)]
     with open(os.path.join(OUT_DIR, "classes.txt"), "w") as f:
         f.write("\n".join(CLASSES))
