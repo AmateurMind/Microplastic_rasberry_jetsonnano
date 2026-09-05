@@ -1,0 +1,12 @@
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 6
+names: 
+  0: microplastic
+  1: fiber
+  2: film
+  3: fragment
+  4: pallet
+  5: foam
