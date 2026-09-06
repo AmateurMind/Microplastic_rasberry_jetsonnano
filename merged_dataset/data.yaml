@@ -1,3 +1,4 @@
+path: c:/Users/suhai/Downloads/Custom_Microplastic_Dataset/Custom_Microplastic_Dataset/merged_dataset
 train: train/images
 val: valid/images
 test: test/images

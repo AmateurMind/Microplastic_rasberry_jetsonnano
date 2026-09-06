@@ -6,3 +6,8 @@ dataset/
 kueranan/
 roboflow_in_water/
 Inhouse_Internship Syllabus.pdf
+
+# Newly added
+classification_dataset/
+*.pkl
+__pycache__/
