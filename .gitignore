@@ -1,5 +1,6 @@
 *.pt
 *.cache
+*.zip
 runs/
 merged_dataset/
 dataset/
@@ -9,5 +10,10 @@ Inhouse_Internship Syllabus.pdf
 
 # Newly added
 classification_dataset/
+syntheric/
 *.pkl
 __pycache__/
+
+# Keep git light - ignore YOLO batch debug visuals
+**/train_batch*.jpg
+**/val_batch*.jpg

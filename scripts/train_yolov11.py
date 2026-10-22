@@ -1,30 +1,36 @@
 import os
+from pathlib import Path
 from ultralytics import YOLO
 
 def train_yolov11():
-    # Load a pre-trained YOLOv11 model (e.g., small version)
-    # Note: Ultralytics currently maps 'yolo11' via the same interface.
-    model = YOLO("yolo11n.pt") 
-    
-    # Path to dataset configuration
-    data_yaml = "merged_dataset/data.yaml" # Update with your dataset path if different
-    
+    model = YOLO("yolo11n.pt")
+
+    # 1-class yaml: all particles unified as "microplastic"
+    # Stage 1 of 2-stage detect+classify pipeline
+    root = Path(__file__).parent.parent
+    data_yaml = str(root / "merged_dataset" / "data_1class.yaml")
+
     if not os.path.exists(data_yaml):
-        print(f"Error: {data_yaml} not found. Please ensure the dataset path is correct.")
+        print(f"Error: {data_yaml} not found.")
         return
 
-    # Train the model
     results = model.train(
         data=data_yaml,
         epochs=50,
         imgsz=640,
         batch=16,
-        project="models/yolov11",
-        name="yolov11_microplastics",
-        device="0" # Use GPU if available, else omit or set to "cpu"
+        project=str(root / "models" / "yolov11"),
+        name="microplastic_detector_1class",
+        device="0",
+        patience=10,
+        save=True,
+        exist_ok=True,
+        single_cls=True,   # force all labels treated as class 0
     )
-    
-    print("YOLOv11 training completed.")
+
+    best = root / "models" / "yolov11" / "microplastic_detector_1class" / "weights" / "best.pt"
+    print(f"\nTraining complete. Best weights: {best}")
+    print("Use this model in detect_and_classify.py with --yolo_model", best)
 
 if __name__ == "__main__":
     train_yolov11()
