@@ -1,6 +1,6 @@
-# Microplastic Detection and Classification System
+# Edge AI-Powered Smart Microscope for Microplastic Detection in Water
 
-An AI-enabled Computer Vision system designed for real-time detection, tracking, and classification of microplastics in aquatic environments, optimized for Edge AI deployment (NVIDIA Jetson Nano, Raspberry Pi).
+An AI-enabled optical microscopy system designed for real-time detection, tracking, and morphological classification of microplastics in water samples, optimized for Edge AI deployment (NVIDIA Jetson Nano, Raspberry Pi).
 
 [![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue)](https://huggingface.co/datasets/amateurmind/microplastic-detection)
 [![Model](https://img.shields.io/badge/YOLO11n-1--Class%20Detector-green)](#stage-1-yolo11n-detector)
