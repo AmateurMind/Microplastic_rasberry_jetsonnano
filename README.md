@@ -2,9 +2,25 @@
 
 An AI-enabled optical microscopy system designed for real-time detection, tracking, and morphological classification of microplastics in water samples, optimized for Edge AI deployment (NVIDIA Jetson Nano, Raspberry Pi).
 
+> **🎓 Academic Note**: This repository hosts the implementation, datasets, and models for the **Bachelor of Engineering (B.E.) Final Year Capstone Project**:  
+> *"Edge AI-Powered Smart Microscope for Microplastic Detection in Water"*.
+
+[![BE Capstone Project](https://img.shields.io/badge/Project-BE%20Final%20Year%20Capstone-blueviolet)](#-about-the-project)
 [![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue)](https://huggingface.co/datasets/amateurmind/microplastic-detection)
+[![Roboflow Project](https://img.shields.io/badge/Roboflow-Dataset%20Viewer-purple)](https://app.roboflow.com/mohammad-suhail/microplastic-detection-oiqbo)
 [![Model](https://img.shields.io/badge/YOLO11n-1--Class%20Detector-green)](#stage-1-yolo11n-detector)
 [![Classifier](https://img.shields.io/badge/Classifier-SVM%20%2F%20Random%20Forest-orange)](#stage-2-particle-classifier)
+
+---
+
+## 🔬 About the Project
+
+Microplastic pollution in aquatic ecosystems is a critical environmental hazard. Conventional laboratory analysis (FTIR, Raman spectroscopy) is time-consuming, expensive, and non-portable. 
+
+This project integrates a **digital microscope / optical sensor** with an **Edge-AI computing unit** (NVIDIA Jetson Nano / Raspberry Pi) to automate on-site water quality assessment:
+- **Optical Input**: High-resolution microscopic feed from glass slides or continuous water flow-cells.
+- **Stage 1 (YOLO11n)**: Rapid localization of microplastic particles with ultra-low latency.
+- **Stage 2 (Morphological Classification)**: Instant classification of extracted particles into `fiber`, `film`, `fragment`, and `pallet`.
 
 ---
 
@@ -153,4 +169,20 @@ python scripts/train_yolov11.py
 │   └── yolov11/                   # YOLO11n training outputs, curves & metrics
 ├── .gitignore                     # Excludes heavy dataset images and checkpoints
 └── README.md
+```
+
+---
+
+## 📜 Citation & Academic Use
+
+If you use this dataset, models, or pipeline in your research or academic project, please cite:
+
+```bibtex
+@misc{smart_microscope_microplastics_2026,
+  author = {Suhail, Mohammad and Contributors},
+  title = {Edge AI-Powered Smart Microscope for Microplastic Detection in Water},
+  year = {2026},
+  howpublished = {Bachelor of Engineering Final Year Capstone Project},
+  url = {https://github.com/AmateurMind/Microplastic_rasberry_jetsonnano}
+}
 ```
