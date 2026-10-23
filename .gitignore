@@ -1,16 +1,15 @@
 *.pt
 *.cache
 *.zip
-runs/
 merged_dataset/
-dataset/
+kaggle(microplastic)/
 kueranan/
 roboflow_in_water/
 Inhouse_Internship Syllabus.pdf
 
 # Newly added
 classification_dataset/
-syntheric/
+synthetic/
 *.pkl
 __pycache__/
 

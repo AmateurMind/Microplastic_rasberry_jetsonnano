@@ -1,5 +1,5 @@
 # Procedurally generated synthetic microplastic dataset
-path: C:/Users/suhai/Downloads/Custom_Microplastic_Dataset/Custom_Microplastic_Dataset/syntheric
+path: C:/Users/suhai/Downloads/Custom_Microplastic_Dataset/Custom_Microplastic_Dataset/synthetic
 train: train/images
 val: val/images
 test: test/images

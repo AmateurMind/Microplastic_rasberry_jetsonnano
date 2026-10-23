@@ -204,7 +204,7 @@ To classify into the 4 target classes (`fiber`, `film`, `fragment`, `pallet`):
 | `dataset/`           | Kaggle (Roboflow Microplastics)                     | **781**    | YOLOv8 Bounding Box           | 1 (`microplastic`)                                | 640×640           |
 | `kueranan/`          | Roboflow Universe (`kueranan/microplastic_100` v10) | **401**    | YOLOv8 Bounding Box           | 4 (`fiber`, `film`, `fragment`, `pallet`)         | 640×640           |
 | `roboflow_in_water/` | Roboflow Universe (`Microplastic in Water` v1)      | **920**    | YOLOv8 OBB (Converted to HBB) | 1 (`microplastic`)                                | 600×800           |
-| `syntheric/`         | Procedurally rendered microscopy models             | **180**    | YOLOv8 Bounding Box           | 5 (`fiber`, `film`, `fragment`, `pellet`, `foam`) | 640×640           |
+| `synthetic/`         | Procedurally rendered microscopy models             | **180**    | YOLOv8 Bounding Box           | 5 (`fiber`, `film`, `fragment`, `pellet`, `foam`) | 640×640           |
 
 > **Total Raw Input Images Across Sources**: **~2,282 images**
 

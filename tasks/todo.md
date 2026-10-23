@@ -19,5 +19,5 @@
 ## Synthetic Dataset
 
 - [x] Make the synthetic generator and splitter configurable by output path.
-- [x] Generate the standalone `syntheric/` five-class YOLO dataset.
+- [x] Generate the standalone `synthetic/` five-class YOLO dataset.
 - [x] Verify image/label pairing and preserve the `kueranan/` dataset.
